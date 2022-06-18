@@ -23,7 +23,7 @@ timezone:
 
 title: Epsylon                          # the main title
 
-tagline: Hacking and Pentesting Blog.   # it will display as the sub-title
+tagline:  Prueba   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Hacking and Pentesting Blog.
@@ -83,7 +83,7 @@ theme_mode:   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: assets\profile.jpeg
 
 # boolean type, the global switch for ToC in posts.
 toc: true
