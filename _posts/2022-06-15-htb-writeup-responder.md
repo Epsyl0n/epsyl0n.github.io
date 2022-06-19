@@ -5,7 +5,7 @@ categories: [Hack The Box, WriteUp]
 tag: [Responder, LFI]
 img_path: /assets/img/htb/responder
 image:
-   path: /assets/img/htb/responder/preview1.png
+   path: preview1.png
    width: 345
    height: 164
    alt: Responder
