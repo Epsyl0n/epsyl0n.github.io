@@ -4,10 +4,10 @@ date: 2022-06-19 3:30:00
 categories: [Hack The Box, WriteUp]
 tag: [Responder, LFI]
 image:
-   path: /assets/img/htb/responder/preview1.png
+   path: assets/img/htb/responder/preview1.png
    width: 1000
    height: 400
-img_path: /assets/img/htb-responder
+img_path: assets/img/htb-responder
 ---
 
 # Responder - HackTheBox
