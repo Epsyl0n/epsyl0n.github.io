@@ -8,9 +8,10 @@ image:
    path: preview1.png
    width: 345
    height: 164
+   alt: 
 ---
 
-# Responder - HackTheBox
+# Responder - Hack The Box
 
 Realizamos un escaneo de `nmap` para identificar los puertos abiertos y servicios.
 
