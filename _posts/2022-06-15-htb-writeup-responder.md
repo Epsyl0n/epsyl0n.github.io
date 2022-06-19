@@ -3,21 +3,20 @@ title: HTB-Responder
 date: 2022-06-19 3:30:00
 categories: [Hack The Box, WriteUp]
 tag: [Responder, LFI]
+img_path: assets/img/htb/responder
 image:
    path: assets/img/htb/responder/preview1.png
-   width: 1000
-   height: 400
-img_path: assets/img/htb-responder
+   width: 800
+   height: 500
 ---
 
 # Responder - HackTheBox
 
-Realizamos un escaneo de ==nmap== para identificar los puertos abiertos y servicios.
+Realizamos un escaneo de `nmap` para identificar los puertos abiertos y servicios.
 
 ```console
 nmap -v -p- --min-rate 5000 -sV -sC {target ip}
 ```
-
 
 Resultado del escaneo:
 
