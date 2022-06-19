@@ -6,8 +6,8 @@ tag: [Responder, LFI]
 img_path: /assets/img/htb/responder
 image:
    path: /assets/img/htb/responder/preview1.png
-   width: 800
-   height: 500
+   width: 345
+   height: 164
    alt: Responder
 ---
 
