@@ -3,9 +3,9 @@ title: HTB-Responder
 date: 2022-06-19 3:30:00
 categories: [Hack The Box, WriteUp]
 tag: [Responder, LFI]
-img_path: assets/img/htb/responder
+img_path: /assets/img/htb/responder
 image:
-   path: assets/img/htb/responder/preview1.png
+   path: /assets/img/htb/responder/preview1.png
    width: 800
    height: 500
 ---
@@ -53,7 +53,7 @@ Nmap done: 1 IP address (1 host up) scanned in 126.94 seconds
 
 Visitamos el servidor web corriendo en el puerto 80 mediante el navegador (Firefox).
 
-![](Pasted image 20220427161647.png)
+![alt](Pasted image 20220427161647.png)
 ![](Pasted image 20220427161628.png)
 
 Nos redirige a una pagina web llamada **unika.htb**. Debido a que nos encontramos dentro de la misma red que la máquina objetivo y que ese dominio no esta registrado en un servidor DNS, procedemos a agregar la ip y el nombre de dominio al archivo **/etc/hosts** para poder visualizar la pagina web.
