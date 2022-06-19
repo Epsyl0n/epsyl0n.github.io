@@ -8,6 +8,7 @@ image:
    path: /assets/img/htb/responder/preview1.png
    width: 800
    height: 500
+   alt: Responder
 ---
 
 # Responder - HackTheBox
