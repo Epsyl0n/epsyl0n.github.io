@@ -1,14 +1,13 @@
 ---
-title: HTB-Responder
+title: HTB - Responder
 date: 2022-06-19 3:30:00
-categories: [Hack The Box, WriteUp, Starting Point]
+categories: [Hack The Box, Starting Point]
 tag: [Responder, LFI]
 img_path: /assets/img/htb/responder
 image:
    path: preview1.png
    width: 345
    height: 164
-   alt: Responder
 ---
 
 # Responder - HackTheBox
