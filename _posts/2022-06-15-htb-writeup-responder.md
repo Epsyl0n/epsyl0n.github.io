@@ -69,7 +69,7 @@ Navegando por la página nos encontramos con un apartado para cambiar el idioma,
 
 ![](Pasted image 20220427162745.png)
 
-Vamos a pasarle al parámetro <b style="color: #1F00FF">"page"</b> la siguiente cadena para saber si es vulnerable a **LFI** y como consecuencia a **path traversal**.
+Vamos a pasarle al parámetro <b style="color:blue">"page"</b> la siguiente cadena para saber si es vulnerable a **LFI** y como consecuencia a **path traversal**.
 
 ```console
 ../../. ./../../../../../windows/system32/drivers/etc/hosts
