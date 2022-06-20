@@ -69,7 +69,7 @@ Navegando por la página nos encontramos con un apartado para cambiar el idioma,
 
 ![](Pasted image 20220427162745.png)
 
-Vamos a pasarle al parámetro <b style="color:orange">"page"</b> la siguiente cadena para saber si es vulnerable a **LFI** y como consecuencia a **path traversal**.
+Vamos a pasarle al parámetro <b style="color:#800000">"page"</b> la siguiente cadena para saber si es vulnerable a <b style="color:#800000">LFI</b> y como consecuencia a <b style="color:#800000">path traversal</b>.
 
 ```console
 ../../. ./../../../../../windows/system32/drivers/etc/hosts
@@ -81,7 +81,7 @@ Vamos a pasarle al parámetro <b style="color:orange">"page"</b> la siguiente ca
 
 Como podemos ver existe una vulnerabilidad en esta web.
 
-Regresando al escaneo, el puerto `5985` se encuentra abierto lo que quiere decir que **WinRM** esta disponible. Podemos aprovecharnos del **LFI** de la página web para capturar el **hash NTLM** de la máquina con ayuda de la herramienta `responder`.
+Regresando al escaneo, el puerto `5985` se encuentra abierto lo que quiere decir que <b style="color:#800000">WinRM</b> esta disponible. Podemos aprovecharnos del <b style="color:#800000">LFI</b> de la página web para capturar el <b style="color:#800000">hash NTLM</b> de la máquina con ayuda de la herramienta `responder`.
 
 Vamos a ejecutar la herramienta con el siguente comando.
 
@@ -93,7 +93,7 @@ sudo responder -I tun0
 
 ![](Pasted image 20220427170550.png)
 
-Verificamos que el servidor **SMB** este activado.
+Verificamos que el servidor <b style="color:#800000">SMB</b> este activado.
 
 ![](Pasted image 20220427170523.png)
 
@@ -106,7 +106,7 @@ Esto para que la página incluya un "recurso" de nuestro servidor `SMB` y se est
 
 ![](Pasted image 20220427171130.png)
 
-Vemos en la terminal que se ha capturado el **hash NTLM**.
+Vemos en la terminal que se ha capturado el <b style="color:#800000">hash NTLM</b>.
 
 ![](Pasted image 20220427171250.png)
 
