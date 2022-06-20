@@ -178,6 +178,6 @@ Ahora solo queda buscar el archivo `flag.txt`.
 
      <b style="color:#800080">5985</b>
 
-Root Flag: <b style="color:#FF8B00">ea81b7afddd03efaa0945333ed147fac</b>
+**Root Flag:** <b style="color:#FF8B00">ea81b7afddd03efaa0945333ed147fac</b>
 
 ![](Pasted image 20220427134218.png)
