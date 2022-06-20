@@ -11,7 +11,7 @@ image:
    alt: 
 ---
 
-## <b style="color:#064663">Escaneo</b>
+## <b style="color:#1E5F74">Escaneo</b>
 ---
 Realizamos un escaneo de `nmap` para identificar los puertos abiertos y servicios.
 
