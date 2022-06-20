@@ -69,7 +69,7 @@ Navegando por la página nos encontramos con un apartado para cambiar el idioma,
 
 ![](Pasted image 20220427162745.png)
 
-Vamos a pasarle al parámetro <b style="color:#1F00FF">"page"</b> la siguiente cadena para saber si es vulnerable a **LFI** y como consecuencia a **path traversal**.
+Vamos a pasarle al parámetro <b style="color: #1F00FF">"page"</b> la siguiente cadena para saber si es vulnerable a **LFI** y como consecuencia a **path traversal**.
 
 ```console
 ../../. ./../../../../../windows/system32/drivers/etc/hosts
@@ -138,7 +138,7 @@ Ahora solo queda buscar el archivo `flag.txt`.
 
 1. ¿Cuántos puertos TCP están abiertos en la máquina?
 
-   <b style="color:#1F00FF">3</b>
+   <b style="color: blue">3</b>
 
 2. Al visitar el servicio web utilizando la dirección IP, ¿cuál es el dominio al que se nos redirige?
 
