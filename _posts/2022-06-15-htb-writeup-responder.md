@@ -11,7 +11,7 @@ image:
    alt: 
 ---
 
-## <b style="color:#1E5F74">Escaneo</b>
+## <b style="color:#9C3D54">Escaneo</b>
 ---
 Realizamos un escaneo de `nmap` para identificar los puertos abiertos y servicios.
 
@@ -81,7 +81,7 @@ Vamos a pasarle al parámetro <b style="color:#800000">"page"</b> la siguiente c
 
 Como podemos ver existe una vulnerabilidad en esta web.
 
-## <b style="color:#ECB365">Ganando Acceso (Admin)</b>
+## <b style="color:#FFE3D8">Ganando Acceso (Admin)</b>
 ---
 Regresando al escaneo, el puerto `5985` se encuentra abierto lo que quiere decir que <b style="color:#800000">WinRM</b> esta disponible. Podemos aprovecharnos del <b style="color:#800000">LFI</b> de la página web para capturar el <b style="color:#800000">hash NTLM</b> de la máquina con ayuda de la herramienta `responder`.
 
