@@ -138,43 +138,43 @@ Ahora solo queda buscar el archivo `flag.txt`.
 
 1. ¿Cuántos puertos TCP están abiertos en la máquina?
 
-   <b style="color: #800080">3</b>
+   <b style="color:#800080">3</b>
 
 2. Al visitar el servicio web utilizando la dirección IP, ¿cuál es el dominio al que se nos redirige?
 
-    <b style="color:#1F00FF">unika.htb</b>
+    <b style="color:#800080">unika.htb</b>
 
 3. ¿Qué lenguaje de secuencias de comandos se utiliza en el servidor para generar páginas web?
 
-    <b style="color:#1F00FF">php</b>
+    <b style="color:#800080">php</b>
 
 4. ¿Cuál es el nombre del parámetro de URL que se usa para cargar diferentes versiones de idioma de la página web?
 
-    <b style="color:#1F00FF">page</b>
+    <b style="color:#800080">page</b>
 
 5. ¿Cuál de los siguientes valores para el parámetro `page` sería un ejemplo de explotación de una vulnerabilidad de inclusión de archivo local (LFI): "french.html", "//10.10.14.6/somefile", "../../. ./../../../../../windows/system32/drivers/etc/hosts", "minikatz.exe"
 
-    <b style="color:#1F00FF">../../. ./../../../../../windows/system32/drivers/etc/hosts</b>
+    <b style="color:#800080">../../. ./../../../../../windows/system32/drivers/etc/hosts</b>
 
 6. ¿Qué significa NTLM?
 
-    <b style="color:#1F00FF">New Technology LAN Manager</b>
+    <b style="color:#800080">New Technology LAN Manager</b>
 
 7. ¿Qué indicador usamos en la utilidad Responder para especificar la interfaz de red?
 
-    <b style="color:#1F00FF">-I</b>
+    <b style="color:#800080">-I</b>
 
 8. Hay varias herramientas que aceptan un desafío/respuesta de NetNTLMv2 y prueban millones de contraseñas para ver si alguna de ellas genera la misma respuesta. A una de estas herramientas se la suele denominar `john`, pero el nombre completo es ¿cuál?.
 
-    <b style="color:#1F00FF">John The Ripper</b>
+    <b style="color:#800080">John The Ripper</b>
 
 9. ¿Cuál es la contraseña para el usuario administrador?
  
-    <b style="color:#1F00FF">batminton</b>
+    <b style="color:#800080">batminton</b>
 
 10. Usaremos un servicio de Windows (es decir, que se ejecuta en la caja) para acceder de forma remota a la máquina Responder usando la contraseña que recuperamos. ¿En qué puerto TCP escucha?
 
-     <b style="color:#1F00FF">5985</b>
+     <b style="color:#800080">5985</b>
 
 Root Flag: <b style="color:#FF8B00">ea81b7afddd03efaa0945333ed147fac</b>
 
