@@ -138,7 +138,7 @@ Ahora solo queda buscar el archivo `flag.txt`.
 
 1. ¿Cuántos puertos TCP están abiertos en la máquina?
 
-   <b style="color:#800080">3</b>
+   <b style="color: #800080">3</b>
 
 2. Al visitar el servicio web utilizando la dirección IP, ¿cuál es el dominio al que se nos redirige?
 
