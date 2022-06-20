@@ -69,7 +69,7 @@ Navegando por la página nos encontramos con un apartado para cambiar el idioma,
 
 ![](Pasted image 20220427162745.png)
 
-Vamos a pasarle al parámetro <b style="color: red">"page"</b> la siguiente cadena para saber si es vulnerable a **LFI** y como consecuencia a **path traversal**.
+Vamos a pasarle al parámetro <b style="color: 1F00FF">"page"</b> la siguiente cadena para saber si es vulnerable a **LFI** y como consecuencia a **path traversal**.
 
 ```console
 ../../. ./../../../../../windows/system32/drivers/etc/hosts
@@ -80,6 +80,7 @@ Vamos a pasarle al parámetro <b style="color: red">"page"</b> la siguiente cade
 ![](Pasted image 20220427163432.png)
 
 Como podemos ver existe una vulnerabilidad en esta web.
+
 Regresando al escaneo, el puerto `5985` se encuentra abierto lo que quiere decir que **WinRM** esta disponible. Podemos aprovecharnos del **LFI** de la página web para capturar el **hash NTLM** de la máquina con ayuda de la herramienta `responder`.
 
 Vamos a ejecutar la herramienta con el siguente comando.
@@ -137,46 +138,44 @@ Ahora solo queda buscar el archivo `flag.txt`.
 
 1. ¿Cuántos puertos TCP están abiertos en la máquina?
 
-   **3**
+   <b style="color:1F00FF">3</b>
 
 2. Al visitar el servicio web utilizando la dirección IP, ¿cuál es el dominio al que se nos redirige?
 
-   **unika.htb**
+    <b style="color:1F00FF">unika.htb</b>
 
 3. ¿Qué lenguaje de secuencias de comandos se utiliza en el servidor para generar páginas web?
 
-   **php**
+    <b style="color:1F00FF">php</b>
 
 4. ¿Cuál es el nombre del parámetro de URL que se usa para cargar diferentes versiones de idioma de la página web?
 
-   **page**
+    <b style="color:1F00FF">page</b>
 
 5. ¿Cuál de los siguientes valores para el parámetro `page` sería un ejemplo de explotación de una vulnerabilidad de inclusión de archivo local (LFI): "french.html", "//10.10.14.6/somefile", "../../. ./../../../../../windows/system32/drivers/etc/hosts", "minikatz.exe"
 
-   **../../. ./../../../../../windows/system32/drivers/etc/hosts**
+    <b style="color:1F00FF">../../. ./../../../../../windows/system32/drivers/etc/hosts</b>
 
 6. ¿Qué significa NTLM?
 
-   **New Technology LAN Manager**
+    <b style="color:1F00FF">New Technology LAN Manager</b>
 
 7. ¿Qué indicador usamos en la utilidad Responder para especificar la interfaz de red?
 
-   **-I**
+    <b style="color:1F00FF">-I</b>
 
 8. Hay varias herramientas que aceptan un desafío/respuesta de NetNTLMv2 y prueban millones de contraseñas para ver si alguna de ellas genera la misma respuesta. A una de estas herramientas se la suele denominar `john`, pero el nombre completo es ¿cuál?.
 
-   **John The Ripper**
+    <b style="color:1F00FF">John The Ripper</b>
 
 9. ¿Cuál es la contraseña para el usuario administrador?
  
-   **batminton**
+    <b style="color:1F00FF">batminton</b>
 
 10. Usaremos un servicio de Windows (es decir, que se ejecuta en la caja) para acceder de forma remota a la máquina Responder usando la contraseña que recuperamos. ¿En qué puerto TCP escucha?
 
-    **5985**
+     <b style="color:1F00FF">5985</b>
 
-Root Flag:
-
-**ea81b7afddd03efaa0945333ed147fac**
+Root Flag: <b style="color:FF8B00">ea81b7afddd03efaa0945333ed147fac</b>
 
 ![](Pasted image 20220427134218.png)
