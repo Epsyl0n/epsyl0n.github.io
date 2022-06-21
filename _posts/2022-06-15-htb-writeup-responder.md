@@ -6,8 +6,8 @@ tag: [Web, Responder, LFI]
 img_path: /assets/img/htb/responder
 image:
    path: preview1.png
-   width: 345
-   height: 164
+   width: 344
+   height: 163
    alt: 
 ---
 <h2 style="color:#74b4f4 ">Escaneo</h2>
