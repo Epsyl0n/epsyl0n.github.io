@@ -10,7 +10,7 @@ image:
    height: 164
    alt: 
 ---
-<h2 style="color:#FFC30F">Escaneo</h2>
+<h2 style="color:#8FD6E1">Escaneo</h2>
 ---
 Realizamos un escaneo de `nmap` para identificar los puertos abiertos y servicios.
 
