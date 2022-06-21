@@ -105,9 +105,12 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 /dashboard            (Status: 301) [Size: 316] [--> http://10.129.10.63/dashboard/]
 ```
 
-Hemos descubierto un archivo llamado <b style="color:#800000">login.php</b>, ahora tenemos un vector de ataque para obtener la flag.
+Hemos descubierto un archivo llamado <b style="color:#800000">login.php</b>, ahora tenemos un vector de ataque para obtener la bandera.
 
+<h2 style="color:#74b4f4">Ganando Acceso (Admin)</h2>
+---
 ![](Pasted image 20220427030623.png)
+
 ![](Pasted image 20220427030556.png)
 
 Podemos intentar una SQL Injection pero gracias al escaneo realizado previamente podemos ver que dentro del servidor <b style="color:#800000">ftp</b> hay dos archivos que pueden contener usuarios y sus respectivas contraseñas para iniciar sesión correctamente.
@@ -145,6 +148,7 @@ local: allowed.userlist.passwd remote: allowed.userlist.passwd
 226 Transfer complete.
 62 bytes received in 00:00 (0.09 KiB/s)
 ```
+
 ![](Pasted image 20220427031617.png)
 
 ![](Pasted image 20220427031638.png)
@@ -159,30 +163,39 @@ Ingresamos el usuario <b style="color:#800000">admin</b> y su contraseña <b sty
 <h2 style="color:#74b4f4">Preguntas</h2>
 ---
 1. ¿Qué interruptor de escaneo nmap emplea el uso de scripts predeterminados durante un escaneo?
+
 	<b style="color:#8B2F97">-sC</b>
 
 2. ¿Qué versión de servicio se encuentra ejecutándose en el puerto 21?
+
 	<b style="color:#8B2F97">vsftpd 3.0.3</b>
 
 3. ¿Qué código FTP se nos devuelve para el mensaje "Inicio de sesión FTP anónimo permitido"?
+
 	<b style="color:#8B2F97">230</b>
 
 4. ¿Qué comando podemos usar para descargar los archivos que encontramos en el servidor FTP?
+
 	<b style="color:#8B2F97">get</b>
 
 5. ¿Cuál es uno de los nombres de usuario que suenan con mayor privilegio en la lista que recuperamos?
+
 	<b style="color:#8B2F97">admin</b>
 
 6. ¿Qué versión de Apache HTTP Server se está ejecutando en el host de destino?
+
 	<b style="color:#8B2F97">2.4.41</b>
 
 7. ¿Cuál es el nombre de un útil complemento de análisis de sitios web que podemos instalar en nuestro navegador?
+
 	<b style="color:#8B2F97">Wappalyzer</b>
 
 8. ¿Qué interruptor podemos usar con gobuster para especificar que estamos buscando tipos de archivo específicos?
+
 	<b style="color:#8B2F97">-x</b>
 
 9. ¿Qué archivo hemos encontrado que pueda proporcionarnos un punto de apoyo en el objetivo?
+
 	<b style="color:#8B2F97">login.php</b>
 
 **Root Flag:** <b style="color:#FF8B00">c7110277ac44d78b6a9fff2232434d16</b>
