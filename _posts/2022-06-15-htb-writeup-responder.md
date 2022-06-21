@@ -135,7 +135,7 @@ Ahora solo queda buscar el archivo `flag.txt`.
 
 ![](Pasted image 20220427172844.png)
 
-<h2 style="color:#9C3D54">Preguntas</h2>
+<h2 style="color:#1597BB">Preguntas</h2>
 ---
 1. ¿Cuántos puertos TCP están abiertos en la máquina?
 
