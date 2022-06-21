@@ -80,7 +80,7 @@ Podemos observar que existe un servidor Apache corriendo en el puerto 80 lo que 
 
 Intentamos una <b style="color:#800000">SQL Injection</b> básica para acceder al sistema como administrador sin necesidad de una contraseña.
 
-```SQL
+```sql
 ' or 1=1#
 ```
 
@@ -91,37 +91,48 @@ Obtenemos la bandera.
 <h2 style="color:#74b4f4">Preguntas</h2>
 ---
 1. ¿Qué significa el acrónimo SQL?
+
 	<b style="color:#8B2F97">Structured Query Language</b>
 	
 2. ¿Cuál es uno de los tipos más comunes de vulnerabilidades de SQL?
-	<b style="color:#800080">SQL Injection</b>
+
+	<b style="color:#8B2F97">SQL Injection</b>
 	
 3. ¿Qué significa PII?
-	<b style="color:#800080">Personally Identifiable Information</b>
+
+	<b style="color:#8B2F97">Personally Identifiable Information</b>
 	
 4. ¿Cuál es el nombre de la lista OWASP Top 10 para la clasificación de esta vulnerabilidad?
-	<b style="color:#800080">A03:2021-Injection</b>
+
+	<b style="color:#8B2F97">A03:2021-Injection</b>
 
 5. ¿Qué servicio y versión se ejecutan en el puerto 80 del destino?
-	<b style="color:#800080">Apache httpd 2.4.38 ((Debian))</b>
+
+	<b style="color:#8B2F97">Apache httpd 2.4.38 ((Debian))</b>
 
 6. ¿Cuál es el puerto estándar utilizado para el protocolo HTTPS?
-	<b style="color:#800080">443</b>
+
+	<b style="color:#8B2F97">443</b>
 
 7. ¿Cuál es un método basado en la suerte para explotar las páginas de inicio de sesión?
-	<b style="color:#800080">Brute-Forcing</b>
+
+	<b style="color:#8B2F97">Brute-Forcing</b>
 
 8. ¿Cómo se llama una carpeta en la terminología de aplicaciones web?
-	<b style="color:#800080">Directory</b>
+
+	<b style="color:#8B2F97">Directory</b>
 
 9. ¿Qué código de respuesta se da para los errores "No encontrado"?
-	<b style="color:#800080">404</b>
+
+	<b style="color:#8B2F97">404</b>
 
 10. ¿Qué interruptor usamos con Gobuster para especificar que buscamos descubrir directorios y no subdominios?
-	<b style="color:#800080">dir</b>
+
+	<b style="color:#8B2F97">dir</b>
 
 11. ¿Qué símbolo usamos para comentar partes del código?
-	<b style="color:#800080">#</b>
+
+	<b style="color:#8B2F97">#</b>
 	
 **Root Flag:** <b style="color:#FF8B00">e3d0796d002a446c0e622226f42e9672</b>
 
