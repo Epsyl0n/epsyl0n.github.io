@@ -2,7 +2,7 @@
 title: HTB - Appointment
 date: 2022-06-21
 categories: [Hack The Box, Starting Point]
-tag: [Web, Responder, LFI, Starting Point-Tier 2]
+tag: [Web, Sql, Starting Point - Tier 2]
 img_path: /assets/img/htb/appointment
 image:
    path: appointment.png
