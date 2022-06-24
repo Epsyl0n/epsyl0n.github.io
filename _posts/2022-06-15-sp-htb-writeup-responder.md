@@ -5,7 +5,7 @@ categories: [Hack The Box, Starting Point]
 tag: [Web, Responder, LFI]
 img_path: /assets/img/htb/responder
 image:
-   path: preview1.png
+   path: responder.png
    width: 344
    height: 163
    alt: 
